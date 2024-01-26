@@ -1,0 +1,13 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+.scale-100 {
+  transform: scale(1);
+  transition: 0.5s;
+}
+
+.scale-120 {
+  transform: scale(1.2);
+  transition: 0.5s;
+}
