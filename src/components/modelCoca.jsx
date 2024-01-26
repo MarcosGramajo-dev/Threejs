@@ -25,7 +25,7 @@ function ModelCoca(){
           <Model />
           <spotLight intensity={2000} angle={0.9} penumbra={1} position={[-2,4,-10]} castShadow/>
           <spotLight intensity={1000} angle={0.9} penumbra={1} position={[-5,4,10]} castShadow/>
-          <OrbitControls enablePan={true} enableZoom={true} enableRotate={true}/>
+          <OrbitControls enablePan={true} enableZoom={false} enableRotate={true}/>
         </Suspense>
       </Canvas>
     </div>
