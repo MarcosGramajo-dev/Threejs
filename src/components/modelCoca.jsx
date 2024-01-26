@@ -3,7 +3,7 @@ import {Canvas} from '@react-three/fiber'
 import {OrbitControls, useGLTF} from '@react-three/drei'
 
 function Model(props) {
-  const { nodes, materials } = useGLTF('src/assets/coca-cola/scene.gltf')
+  const { nodes, materials } = useGLTF('public/models/coca-cola/scene.gltf')
   return (
     <group {...props} dispose={null}>
       <mesh geometry={nodes.Object_2.geometry} material={materials.Material} rotation={[-Math.PI / 2, 0, 0]} />
