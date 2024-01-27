@@ -2,6 +2,11 @@
 @tailwind components;
 @tailwind utilities;
 
+body{
+  background: linear-gradient(0deg, #710007, #D7000D);
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
 .scale-100 {
   transform: scale(1);
   transition: 0.5s;

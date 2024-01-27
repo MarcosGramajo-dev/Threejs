@@ -10,7 +10,7 @@ function Model(props) {
   })
   return (
     <group {...props} ref={myMesh} dispose={null}>
-      <mesh geometry={nodes.Object_2.geometry} material={materials.Material} position={[-0.2,-2.5,-0.2]} scale={1.8} rotation={[-Math.PI / 2.2, 0, 0]} />
+      <mesh geometry={nodes.Object_2.geometry} material={materials.Material} position={[-0.2,-2.5,-0.2]} scale={1.8} rotation={[-Math.PI / 2.2, 0, 0.2]} />
     </group>
   )
 }
@@ -19,8 +19,8 @@ function ModelCoca(){
   const ref = useRef()
   
   return (
-    <div className="mt-48">
-      <Canvas style={{height:" 300px"}}>
+    <div className="w-60 h-60 lg:w-80 lg:h-80">
+      <Canvas style={{height:"100%", width: "100%"}}>
         {/* <mesh ref={ref}>
           <boxGeometry arrach='geometry' args={[2,2,2]} />
         </mesh> */}
