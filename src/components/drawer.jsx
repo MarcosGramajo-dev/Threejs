@@ -25,12 +25,12 @@ function DrawerWithNavigation() {
   return (
     <React.Fragment>
       <Button onClick={openDrawer} className="p-0 bg-transparent shadow-none"><img src={Arrow} alt="arrow" className="rotate-90 w-9"/></Button>
-      <Drawer open={open} onClose={closeDrawer} className="bg-red-500">
+      <Drawer open={open} onClose={closeDrawer} className="bg-white">
         <div className="mb-2 flex items-center justify-between p-4">
-          <Typography variant="h5" color="white">
+          <Typography variant="h5" color="black">
             GRAMAJO MARCOS
           </Typography>
-          <IconButton variant="text" color="white" onClick={closeDrawer}>
+          <IconButton variant="text" color="black" onClick={closeDrawer}>
             <svg
               xmlns="http://www.w3.org/2000/svg"
               fill="none"
@@ -47,7 +47,7 @@ function DrawerWithNavigation() {
             </svg>
           </IconButton>
         </div>
-        <List className="z-50 text-white">
+        <List className="z-50 text-black">
           <ListItem onClick={() => linkMenu('https://github.com/MarcosGramajo-dev')}>
             <ListItemPrefix>
                 <svg 

@@ -77,8 +77,8 @@ function App() {
         <div>
           <div className="flex justify-evenly py-4 items-center lg:hidden w-full">
             <img src={Banner1} alt="ban1" className="max-w-[20%] w-[100px]"/>
-            <img src={Banner2} alt="ban2" className="max-w-[20%] w-[100px]"/>
             <img src={Banner3} alt="ban3" className="max-w-[20%] w-[100px]"/>
+            <img src={Banner2} alt="ban2" className="max-w-[20%] w-[100px]"/>
             <img src={Banner4} alt="ban4" className="max-w-[20%] w-[100px]"/>
           </div>
         </div>
