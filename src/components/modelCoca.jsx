@@ -1,25 +1,30 @@
 import {Suspense, useRef, useState} from 'react'
-import {Canvas} from '@react-three/fiber'
+import {Canvas, useFrame} from '@react-three/fiber'
 import {OrbitControls, useGLTF} from '@react-three/drei'
 
 function Model(props) {
   const { nodes, materials } = useGLTF('models/coca-cola/scene.gltf')
+  const myMesh = useRef()
+  useFrame(({ clock }) => {
+    myMesh.current.rotation.y = clock.getElapsedTime() / 2
+  })
   return (
-    <group {...props} dispose={null}>
-      <mesh geometry={nodes.Object_2.geometry} material={materials.Material} rotation={[-Math.PI / 2, 0, 0]} />
+    <group {...props} ref={myMesh} dispose={null}>
+      <mesh geometry={nodes.Object_2.geometry} material={materials.Material} position={[-0.2,-2.5,-0.2]} scale={1.8} rotation={[-Math.PI / 2.2, 0, 0]} />
     </group>
   )
 }
 
 function ModelCoca(){
   const ref = useRef()
+  
   return (
     <div className="mt-48">
-      <Canvas style={{height: 600}}>
+      <Canvas style={{height:" 300px"}}>
         {/* <mesh ref={ref}>
           <boxGeometry arrach='geometry' args={[2,2,2]} />
         </mesh> */}
-        <Suspense fallback={null}>
+        <Suspense  fallback={null}>
           <ambientLight />
           <spotLight intensity={2000} angle={0.9} penumbra={1} position={[9,4,10]} castShadow/>
           <Model />
