@@ -43,7 +43,7 @@ function App() {
   };
 
   return (
-    <div className="w-screen h-screen lg:overflow-hidden flex items-end lg:items-center">
+    <div className="w-screen h-screen lg:overflow-hidden flex items-stretch pt-24">
       <nav className="w-full fixed bg-white z-50 top-0">
         <div className="flex w-full px-12 h-24 justify-between items-center shadow-md">
           <div> <a href="/"><img src={Logo} alt="Logo" /></a></div>
@@ -71,7 +71,7 @@ function App() {
             <img src={Banner4} alt="ban4" className="max-w-[20%] w-[100px]"/>
           </div>
         </div>
-        <div className="bg-white rounded-full w-60 h-60 lg:w-80 lg:h-80 my-4 lg:my-9 flex justify-center items-center">
+        <div className="shadow-lg bg-white p-6 rounded-full w-60 h-60 lg:w-80 lg:h-80 my-4 lg:my-9 flex justify-center items-center">
           <ModelCoca/>
         </div>
         <div>
