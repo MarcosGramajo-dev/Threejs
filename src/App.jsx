@@ -43,7 +43,7 @@ function App() {
   };
 
   return (
-    <div className="w-screen h-screen lg:overflow-hidden flex items-stretch pt-24">
+    <div className="w-screen h-screen lg:overflow-hidden flex items-center pt-24">
       <nav className="w-full fixed bg-white z-50 top-0">
         <div className="flex w-full px-12 h-24 justify-center lg:justify-between items-center shadow-md">
           <div> <a href="/"><img src={Logo} alt="Logo" /></a></div>
@@ -55,7 +55,7 @@ function App() {
         <DrawerWithNavigation/>
       </div>
 
-      <div className="flex flex-col lg:flex-row items-center lg:items-stretch w-full justify-around  flex-wrap">
+      <div className="flex flex-col lg:flex-row items-center lg:items-stretch w-full justify-evenly  flex-wrap">
         {/* <div className="w-full min-h-[700px] h-[100vh] flex justify-center items-center lg-max:mt-36">
           {renderSlide()}
         </div> */}
@@ -71,8 +71,10 @@ function App() {
             <img src={Banner4} alt="ban4" className="max-w-[20%] w-[100px]"/>
           </div>
         </div>
-        <div className="shadow-lg bg-white p-6 rounded-full w-80 h-80 lg:w-80 lg:h-80 my-2 lg:my-9 flex justify-center items-center">
-          <ModelCoca/>
+        <div className='max-w-[85%] max-h-[40%] w-[300px] h-[300px] my-4 lg:max-w-[40%] lg:max-h-[50%] lg:w-[500px] lg:h-[500px] flex justify-center items-center '>
+          <div className=" shadow-lg bg-white p-6 rounded-full w-full h-full my-2 flex justify-center items-center ">
+            <ModelCoca/>
+          </div>
         </div>
         <div>
           <div className="flex justify-evenly py-4 items-center lg:hidden w-full">

@@ -19,7 +19,7 @@ function ModelCoca(){
   const ref = useRef()
   
   return (
-    <div className="w-80 h-80 lg:w-80 lg:h-80">
+    <div className="w-full h-full">
       <Canvas style={{height:"100%", width: "100%"}}>
         {/* <mesh ref={ref}>
           <boxGeometry arrach='geometry' args={[2,2,2]} />
