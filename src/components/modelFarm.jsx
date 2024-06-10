@@ -4,6 +4,7 @@ import { Canvas, useFrame } from '@react-three/fiber';
 import { OrbitControls } from '@react-three/drei';
 import { STLLoader } from 'three/examples/jsm/loaders/STLLoader';
 import * as THREE from 'three';
+import farmaciaModel from '../../public/models/farmacia/Farmacia.stl'
 
 function Model({ url, position, rotation, scale }) {
   const ref = useRef();
@@ -37,7 +38,7 @@ function ModelFarm() {
         <Suspense fallback={null}>
           <directionalLight intensity={50} penumbra={1} position={[5,10,7.5]} />
           {/* <perspectiveCamera position={[-14,9,0]}/> */}
-          <Model url="public\models\farmacia\Farmacia.stl" position={[0, 1.5, 0]} rotation={[0, 0, 0]} scale={[1,1,1]} />
+          <Model url={farmaciaModel} position={[0, 1.5, 0]} rotation={[0, 0, 0]} scale={[1,1,1]} />
           <OrbitControls enablePan={true} enableZoom={true} enableRotate={true} />
         </Suspense>
       </Canvas>
