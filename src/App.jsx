@@ -1,18 +1,20 @@
 import { useState } from 'react';
-import Menu from './assets/Menu.svg';
-import Logo from './assets/coca_cola.png';
-import Botella from './assets/coca_cola_2.png';
+// import Menu from './assets/Menu.svg';
+import Logo from './assets/logo.jpg';
+// import Logo from './assets/coca_cola.png';
+// import Botella from './assets/coca_cola_2.png';
 import Slide_original from './assets/slide/slide_original.png';
 import Slide_zero from './assets/slide/slide_zero.png';
 import Slide_light from './assets/slide/slide_light.png';
 
-import Banner1 from './assets/banner/ban1.png';
-import Banner2 from './assets/banner/ban2.png';
-import Banner3 from './assets/banner/ban3.png';
-import Banner4 from './assets/banner/ban4.png';
+// import Banner1 from './assets/banner/ban1.png';
+// import Banner2 from './assets/banner/ban2.png';
+// import Banner3 from './assets/banner/ban3.png';
+// import Banner4 from './assets/banner/ban4.png';
 
 import DrawerWithNavigation from './components/drawer.jsx';
-import ModelCoca from './components/modelCoca.jsx'
+// import ModelCoca from './components/modelCoca.jsx'
+import ModelFarm from './components/modelFarm.jsx'
 
 import './App.css';
 
@@ -46,8 +48,8 @@ function App() {
     <div className="w-screen h-screen lg:overflow-hidden flex items-center pt-24">
       <nav className="w-full fixed bg-white z-50 top-0">
         <div className="flex w-full px-12 h-24 justify-center lg:justify-between items-center shadow-md">
-          <div> <a href="/"><img src={Logo} alt="Logo" /></a></div>
-          <div className="hidden lg:block lg:w-14"> <img src={Botella} alt="Botella" className="" /></div>
+          <div> <a href="/"><img src={Logo} className='h-[80px]' alt="Logo" /></a></div>
+          {/* <div className="hidden lg:block lg:w-14"> <img src={Botella} alt="Botella" className="" /></div> */}
         </div>
       </nav>
       
@@ -55,11 +57,11 @@ function App() {
         <DrawerWithNavigation/>
       </div>
 
-      <div className="flex flex-col lg:flex-row items-center lg:items-stretch w-full justify-evenly  flex-wrap">
+      <div className="flex flex-col lg:flex-row items-center lg:items-stretch w-full h-full justify-evenly  flex-wrap">
         {/* <div className="w-full min-h-[700px] h-[100vh] flex justify-center items-center lg-max:mt-36">
           {renderSlide()}
         </div> */}
-        <div className="min-w-[30%] flex flex-col justify-evenly">
+        {/* <div className="min-w-[30%] flex flex-col justify-evenly">
           <div className="px-4">
             <h1 className="font-semibold text-3xl text-white">Open hapiniess with a Coca-Cola</h1>
             <h2 className="text-1xl mt-3 text-white"> Look for me in restaurants, drink machines, and more sites. </h2>
@@ -83,7 +85,8 @@ function App() {
             <img src={Banner2} alt="ban2" className="max-w-[20%] w-[100px]"/>
             <img src={Banner4} alt="ban4" className="max-w-[20%] w-[100px]"/>
           </div>
-        </div>
+        </div> */}
+        <ModelFarm/>
       </div>
     </div>
   );
