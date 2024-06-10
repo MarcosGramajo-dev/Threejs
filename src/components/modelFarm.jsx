@@ -33,11 +33,11 @@ function Model({ url, position, rotation, scale }) {
 function ModelFarm() {
   return (
     <div className="w-full h-full">
-      <Canvas style={{ height: "100%", width: "100%" }} camera={{ position: [-14, 9, 0], fov: 50 }}>
+      <Canvas style={{ height: "100%", width: "100%" }} camera={{ position: [19, 9, 0], fov: 50, rotateY: 90 }}>
         <Suspense fallback={null}>
           <directionalLight intensity={50} penumbra={1} position={[5,10,7.5]} />
           {/* <perspectiveCamera position={[-14,9,0]}/> */}
-          <Model url="/src/assets/estructuras/farmacia/Farmacia.stl" position={[0, 1.5, 0]} rotation={[0, 0, 0]} scale={[1,1,1]} />
+          <Model url="public\models\farmacia\Farmacia.stl" position={[0, 1.5, 0]} rotation={[0, 0, 0]} scale={[1,1,1]} />
           <OrbitControls enablePan={true} enableZoom={true} enableRotate={true} />
         </Suspense>
       </Canvas>
