@@ -34,9 +34,15 @@ function Model({ url, position, rotation, scale }) {
 function ModelFarm() {
   return (
     <div className="w-full h-full">
-      <Canvas style={{ height: "100%", width: "100%" }} camera={{ position: [19, 9, 0], fov: 50, rotateY: 90 }}>
+      <Canvas style={{ height: "100%", width: "100%" }} camera={{ position: [0, 18, 0], fov: 50, rotation:[0,-90,0] }}>
         <Suspense fallback={null}>
-          <directionalLight intensity={50} penumbra={1} position={[5,10,7.5]} />
+          {/* <directionalLight intensity={50} penumbra={1} position={[0,15,0]} /> */}
+          <ambientLight intensity={1000} position={[0,10,0]}/>
+          <pointLight intensity={500} penumbra={1} position={[-1,3.5,-4]}/> 
+          <pointLight intensity={500} penumbra={1} position={[-1,3.5,0]}/> 
+          <pointLight intensity={500} penumbra={1} position={[2.8,3.5,0]}/> 
+          <pointLight intensity={500} penumbra={1} position={[-3.3,3.5,3.8]}/> 
+          <pointLight intensity={500} penumbra={1} position={[0,3.5,4]}/> 
           {/* <perspectiveCamera position={[-14,9,0]}/> */}
           <Model url={farmaciaModel} position={[0, 1.5, 0]} rotation={[0, 0, 0]} scale={[1,1,1]} />
           <OrbitControls enablePan={true} enableZoom={true} enableRotate={true} />
