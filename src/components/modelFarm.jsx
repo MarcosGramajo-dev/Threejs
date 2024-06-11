@@ -34,7 +34,7 @@ function Model({ url, position, rotation, scale }) {
 function ModelFarm() {
   return (
     <div className="w-full h-full">
-      <Canvas style={{ height: "100%", width: "100%" }} camera={{ position: [0, 18, 0], fov: 50, rotation:[0,-90,0] }}>
+      <Canvas style={{ height: "100%", width: "100%" }} camera={{ position: [0, 25, 0], fov: 50, rotation:[0,-90,0] }}>
         <Suspense fallback={null}>
           {/* <directionalLight intensity={50} penumbra={1} position={[0,15,0]} /> */}
           <ambientLight intensity={1000} position={[0,10,0]}/>
